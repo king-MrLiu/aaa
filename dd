@@ -1,0 +1,6 @@
+var getId = ( ()=> {
+    var i = 0;
+    return  ()=> {
+        return i++;
+    };
+})();
