@@ -1,0 +1,17 @@
+function add () {
+  var args = Array.prototype.slice.call(arguments);
+
+  var fn = function () {
+    var sub_arg = Array.prototype.slice.call(arguments);
+　　 args.concat(sub_arg)
+    return add.apply(null, args.concat(sub_arg));
+  }
+
+  fn.valueOf = function () {
+  return args.reduce(function(a, b) {
+      return a + b;
+    })
+  }
+
+  return fn;
+}
