@@ -1,0 +1,4 @@
+var str="abc";
+str = str.split("")
+str = str.reverse()
+str = str.join("")
